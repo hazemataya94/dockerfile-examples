@@ -1,0 +1,14 @@
+Options -Indexes
+<IfModule mod_rewrite.c>
+      RewriteEngine on
+      RewriteCond %{REQUEST_URI} !^public
+      RewriteRule ^common/(.*)$ common/$1 [L,NC]
+      RewriteRule ^docs/(.*)$ docs/$1 [L,NC]
+      RewriteRule ^backend/web/(.*)$ /$1 [L,NC]
+      RewriteRule ^(.*)$ backend/web/$1 [L]
+</IfModule>
+
+<FilesMatch "\.(init|psd|log|sh|gitignore|gitkeep|htaccess)$">
+Order allow,deny
+Deny from all
+</FilesMatch>
