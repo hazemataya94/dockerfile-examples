@@ -85,6 +85,7 @@ docker build -t cpp-cmake:staging .
 docker run --rm cpp-cmake:staging
 ```
 - `--rm` automatically remove the container when it exits
+
 On the terminal you can see `Hello World!` and the container will exit once the sentence is printed
 
 ## Advanced PHP Yii2
