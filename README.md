@@ -43,13 +43,14 @@ docker build -t node-express .
 
 ### Run
 ```
-docker run -it --rm -d -e PORT=8080 -p 2053:8080 node-express
+docker run -it --rm -d -e DISPLAY_NAME="Beautiful" -e PORT=8080 -p 2053:8080 node-express
 ```
 - `-it` enable interaction with the container
 - `--rm` automatically remove the container when it exits
 - `-d` detach and run container in background
+- `-e DISPLAY_NAME="Beautiful"` set environment variable DISPLAY_NAME value to "Beautiful" 
 - `-e PORT=8080` set environment variable PORT value to 8080 
-- `-p 2053:8080` maps the host port 2053 to container port 80
+- `-p 2053:8080` maps the host port 2053 to container port 8080
 - `node-express` image name
 
 Open browser and go to http://localhost:2053
