@@ -1,6 +1,8 @@
 # Dockerfile examples
 
 ## PHP Info
+
+#### Build
 Open terminal and execute the following commands
 ```
 cd php-info
@@ -11,6 +13,8 @@ docker build -t php-info .
 ```
 - `-t php-info` the image name, tag will be "latest" by default
 - `.` Dockerfile path, which is current path
+
+#### Run
 ```
 docker run -it --rm -p 2052:80 php-info
 ```
@@ -18,10 +22,14 @@ docker run -it --rm -p 2052:80 php-info
 - `--rm` automatically remove the container when it exits
 - `-p 2052:80` maps the host port 2052 to container port 80
 
-Open browser and go to http://localhost:2052/info.php <br />
-Press ctrl+c on windows and macOS to exit and stop the container
+Open browser and go to http://localhost:2052/info.php
+
+#### Stop
+Press ctrl+c on windows and macOS to exit and stop the container, which will be automatically deleted because `--rm` was passed in the run command
 
 ## Node Express
+
+#### Build
 Open terminal and execute the following commands
 ```
 cd node-express
@@ -32,6 +40,8 @@ docker build -t node-express .
 ```
 - `-t php-info` the image name, tag will be "latest" by default
 - `.` Dockerfile path, which is current path
+
+#### Run
 ```
 docker run -it --rm -d -e PORT=8080 -p 2053:8080 node-express
 ```
@@ -42,7 +52,9 @@ docker run -it --rm -d -e PORT=8080 -p 2053:8080 node-express
 - `-p 2053:8080` maps the host port 2053 to container port 80
 - `node-express` image name
 
-Open browser and go to http://localhost:2053 <br />
+Open browser and go to http://localhost:2053
+
+#### Stop
 Execute the following to get list of all containers
 ```
 docker ps -a
@@ -52,9 +64,11 @@ To stop the container execute:
 ```
 docker stop CONTAINER_ID
 ```
-- Once the container is stopped it will be deleted automatically because `--rm` was passed in the run command
+Once the container is stopped it will be deleted automatically because `--rm` was passed in the run command
 
 ## CPP CMake
+
+#### Build
 Open terminal and execute the following commands
 ```
 cd cpp-cmake
@@ -65,12 +79,17 @@ docker build -t cpp-cmake:staging .
 ```
 - `-t cpp-cmake:staging` the image name, the tag is "staging"
 - `.` Dockerfile path, which is current path
+
+#### Run
 ```
 docker run --rm cpp-cmake:staging
 ```
 - `--rm` automatically remove the container when it exits
+`Hello World!` will be printed on the terminal, and the container will exit once the sentence is printed and it will be deleted automatically because `--rm` was passed in the run command
 
 ## Advanced PHP Yii2
+
+#### Build
 Open terminal and execute the following commands
 ```
 cd advanced
@@ -81,6 +100,8 @@ docker build -t advanced .
 ```
 - `-t php-info` the image name, tag will be "latest" by default
 - `.` Dockerfile path, which is current path
+
+#### Run
 ```
 docker run -it --rm -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e MYSQL_PASSWORD="" -p 2082:80 advanced
 ```
@@ -91,5 +112,7 @@ docker run -it --rm -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e 
 - `-e MYSQL_PASSWORD=""` set environment variable MYSQL_PASSWORD value to "" 
 - `-p 2082:80` maps the host port 2082 to container port 80
 
-Open browser and go to http://localhost:2082 <br />
-Press ctrl+c on windows and macOS to exit and stop the container
+Open browser and go to http://localhost:2082
+
+#### Stop
+Press ctrl+c on windows and macOS to exit and stop the container, which will be automatically deleted because `--rm` was passed in the run command
