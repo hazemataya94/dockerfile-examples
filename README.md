@@ -86,7 +86,7 @@ docker run --rm cpp-cmake:staging
 ```
 - `--rm` automatically remove the container when it exits
 
-On the terminal you can see `Hello World!` and the container will exit once the sentence is printed
+`Hello World!` will be printed on the terminal, and the container will exit once the sentence is printed and it will be deleted automatically because `--rm` was passed in the run command
 
 ## Advanced PHP Yii2
 
