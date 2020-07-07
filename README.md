@@ -9,14 +9,14 @@ Once you're inside the directory build the image and run it
 ```
 docker build -t php-info .
 ```
-- `-t php-info` the image name, tag will be "latest" by default
-- `.` Dockerfile path, which is current path
+- **`-t php-info`** the image name, tag will be "latest" by default
+- **`.`** Dockerfile path, which is current path
 ```
 docker run -it --rm -p 2052:80 php-info
 ```
-- `-it` enable interaction with the container
-- `--rm` automatically remove the container when it exits
-- `-p 2052:80` maps the host port 2052 to container port 80
+- **`-it`** enable interaction with the container
+- **`--rm`** automatically remove the container when it exits
+- **`-p 2052:80`** maps the host port 2052 to container port 80
 
 Open browser and go to *http://localhost:2052/info.php*
 Press ctrl+c on windows and macOS to exit and stop the container
@@ -30,29 +30,29 @@ Once you're inside the directory build the image and run it
 ```
 docker build -t node-express .
 ```
-- `-t php-info` the image name, tag will be "latest" by default
-- `.` Dockerfile path, which is current path
+- **`-t php-info`** the image name, tag will be "latest" by default
+- **`.`** Dockerfile path, which is current path
 ```
 docker run -it --rm -d -e PORT=8080 -p 2053:8080 node-express
 ```
-- `-it` enable interaction with the container
-- `--rm` automatically remove the container when it exits
-- `-d` detach and run container in background
-- `-e PORT=8080` set environment variable PORT value to 8080 
-- `-p 2053:8080` maps the host port 2053 to container port 80
-- `node-express` image name
+- **`-it`** enable interaction with the container
+- **`--rm`** automatically remove the container when it exits
+- **`-d`** detach and run container in background
+- **`-e PORT=8080`** set environment variable PORT value to 8080 
+- **`-p 2053:8080`** maps the host port 2053 to container port 80
+- **`node-express`** image name
 
 Open browser and go to *http://localhost:2053*
 Execute the following to get list of all containers
 ```
 docker ps -a
 ```
-- `-a` to list all containers
+- **`-a`** to list all containers
 To stop the container execute:
 ```
 docker stop CONTAINER_ID
 ```
-- Once the container is stopped it will be deleted automatically because `--rm` was passed in the run command
+- Once the container is stopped it will be deleted automatically because `--rm`** was passed in the run command
 
 ## CPP CMake
 Open terminal and execute the following commands
@@ -63,12 +63,12 @@ Once you're inside the directory build the image and run it
 ```
 docker build -t cpp-cmake:staging .
 ```
-- `-t cpp-cmake:staging` the image name, the tag is "staging"
-- `.` Dockerfile path, which is current path
+- **`-t cpp-cmake:staging`** the image name, the tag is "staging"
+- **`.`** Dockerfile path, which is current path
 ```
 docker run --rm cpp-cmake:staging
 ```
-- `--rm` automatically remove the container when it exits
+- **`--rm`** automatically remove the container when it exits
 
 ## Advanced PHP Yii2
 Open terminal and execute the following commands
@@ -79,17 +79,17 @@ Once you're inside the directory build the image and run it
 ```
 docker build -t advanced .
 ```
-- `-t php-info` the image name, tag will be "latest" by default
-- `.` Dockerfile path, which is current path
+- **`-t php-info`** the image name, tag will be "latest" by default
+- **`.`** Dockerfile path, which is current path
 ```
 docker run -it --rm -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e MYSQL_PASSWORD="" -p 2082:80 advanced
 ```
-- `-it` enable interaction with the container
-- `--rm` automatically remove the container when it exits
-- `-e MYSQL_DATABASE="advanced_db"` set environment variable MYSQL_DATABASE value to "advanced_db" 
-- `-e MYSQL_USERNAME="root"` set environment variable MYSQL_USERNAME value to "root" 
-- `-e MYSQL_PASSWORD=""` set environment variable MYSQL_PASSWORD value to "" 
-- `-p 2082:80` maps the host port 2082 to container port 80
+- **`-it`** enable interaction with the container
+- **`--rm`** automatically remove the container when it exits
+- **`-e MYSQL_DATABASE="advanced_db"`** set environment variable MYSQL_DATABASE value to "advanced_db" 
+- **`-e MYSQL_USERNAME="root"`** set environment variable MYSQL_USERNAME value to "root" 
+- **`-e MYSQL_PASSWORD=""`** set environment variable MYSQL_PASSWORD value to "" 
+- **`-p 2082:80`** maps the host port 2082 to container port 80
 
 Open browser and go to *http://localhost:2082*
 Press ctrl+c on windows and macOS to exit and stop the container
