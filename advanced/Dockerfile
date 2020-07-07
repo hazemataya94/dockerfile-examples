@@ -2,7 +2,7 @@ FROM php:7.4.7-apache
 
 ARG YII2_ENV=Production
 
-LABEL maintainer="hazem.ataya@medicus.ai"
+LABEL maintainer="hazem.ataya94@gmail.com"
 
 #install composer, or you can use apt-get install if you started with OS image
 COPY --from=composer:1.10.7 /usr/bin/composer /usr/bin/composer

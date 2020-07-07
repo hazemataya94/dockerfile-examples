@@ -23,4 +23,4 @@ RUN useradd -m -d /home/cpp-user cpp-user \
 
 USER cpp-user
 
-CMD ["./hello_world"]
+ENTRYPOINT ["./hello_world"]

@@ -17,6 +17,6 @@ RUN npm install
 
 ENV PORT=3000
 
-CMD ["node", "server.js"]
+ENTRYPOINT ["node", "server.js"]
 
 EXPOSE ${PORT}

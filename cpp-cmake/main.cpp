@@ -1,9 +1,8 @@
 //
 //  main.cpp
-//  duck
+//  docker
 //
 //  Created by Hazem Ataya on 2/2/20.
-//  Copyright © 2020 Medicus AI. All rights reserved.
 //
 
 #include <iostream>
