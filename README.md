@@ -18,7 +18,7 @@ docker run -it --rm -p 2052:80 php-info
 - `--rm` automatically remove the container when it exits
 - `-p 2052:80` maps the host port 2052 to container port 80
 
-Open browser and go to *http://localhost:2052/info.php*
+Open browser and go to http://localhost:2052/info.php <br />
 Press ctrl+c on windows and macOS to exit and stop the container
 
 ## Node Express
@@ -42,7 +42,7 @@ docker run -it --rm -d -e PORT=8080 -p 2053:8080 node-express
 - `-p 2053:8080` maps the host port 2053 to container port 80
 - `node-express` image name
 
-Open browser and go to *http://localhost:2053*
+Open browser and go to http://localhost:2053 <br />
 Execute the following to get list of all containers
 ```
 docker ps -a
@@ -91,5 +91,5 @@ docker run -it --rm -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e 
 - `-e MYSQL_PASSWORD=""` set environment variable MYSQL_PASSWORD value to "" 
 - `-p 2082:80` maps the host port 2082 to container port 80
 
-Open browser and go to *http://localhost:2082*
+Open browser and go to http://localhost:2082 <br />
 Press ctrl+c on windows and macOS to exit and stop the container
