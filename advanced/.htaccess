@@ -4,8 +4,8 @@ Options -Indexes
       RewriteCond %{REQUEST_URI} !^public
       RewriteRule ^common/(.*)$ common/$1 [L,NC]
       RewriteRule ^docs/(.*)$ docs/$1 [L,NC]
-      RewriteRule ^backend/web/(.*)$ /$1 [L,NC]
-      RewriteRule ^(.*)$ backend/web/$1 [L]
+      RewriteRule ^frontend/web/(.*)$ /$1 [L,NC]
+      RewriteRule ^(.*)$ frontend/web/$1 [L]
 </IfModule>
 
 <FilesMatch "\.(init|psd|log|sh|gitignore|gitkeep|htaccess)$">

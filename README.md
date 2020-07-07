@@ -104,10 +104,11 @@ docker build -t advanced .
 
 ### Run
 ```
-docker run -it --rm -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e MYSQL_PASSWORD="" -p 2082:80 advanced
+docker run -it --rm -e MYSQL_HOST="host.docker.internal" -e MYSQL_DATABASE="advanced_db" -e MYSQL_USERNAME="root" -e MYSQL_PASSWORD="" -p 2082:80 advanced
 ```
 - `-it` enable interaction with the container
 - `--rm` automatically remove the container when it exits
+- `-e MYSQL_HOST="host.docker.internal"` set environment variable MYSQL_HOST value to "host.docker.internal" to make the container connect to the MySQL server running on the host (outside docker)
 - `-e MYSQL_DATABASE="advanced_db"` set environment variable MYSQL_DATABASE value to "advanced_db" 
 - `-e MYSQL_USERNAME="root"` set environment variable MYSQL_USERNAME value to "root" 
 - `-e MYSQL_PASSWORD=""` set environment variable MYSQL_PASSWORD value to "" 
