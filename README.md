@@ -61,6 +61,7 @@ Execute the following to get list of all containers
 docker ps -a
 ```
 - `-a` to list all containers
+
 To stop the container execute:
 ```
 docker stop CONTAINER_ID
