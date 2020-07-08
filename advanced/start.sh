@@ -1,7 +1,5 @@
 #!/bin/bash
 
-#!/bin/bash
-
 API_COOKIE_KEY=`tr -dc 'a-zA-Z0-9_-' < /dev/urandom | head -c32`
 
 cat > api/config/params-local.php << EOF
